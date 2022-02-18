@@ -115,7 +115,7 @@ __webpack_require__.r(__webpack_exports__);
 
 class ApiConstantsService {
     constructor() {
-        this.URL = 'https://coursing-be.herokuapp.com';
+        this.URL = 'https://coursehuntapp.herokuapp.com';
         this.port = '/';
         this.endpoint = 'api/';
         this.SERVER = this.URL + this.port + this.endpoint;
