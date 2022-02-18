@@ -1,5 +1,6 @@
 require('dotenv').config()
 var express = require("express");
+var expressStaticGzip = require("express-static-gzip");
 var path = require("path");
 var platformRouter = require("./controllers/Editor.js");
 var dashboardRouter = require("./controllers/dashboard.js");
@@ -12,7 +13,7 @@ var dir = path.join(__dirname, 'uploads/images');
 var publidir = path.join(__dirname, 'public');
 app.use('/uploads/images',express.static(dir));
 app.use('/upload/images',express.static(dir));
-app.use('/',express.static(publidir));
+app.use('/',expressStaticGzip(publidir));
 const PORT = process.env.PORT;
 
 app.use(bodyParser.json()); 
