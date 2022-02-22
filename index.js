@@ -9,7 +9,7 @@ var ip= require('ip')
 var app = express();
 var bodyParser = require("body-parser");
 var session = require("express-session");
-var dir = path.join(__dirname, 'upload/images');
+var dir = path.join(__dirname, 'upload','images');
 console.log('dir:', dir)
 var publidir = path.join(__dirname, 'public');
 app.use('/upload/images',express.static(dir));

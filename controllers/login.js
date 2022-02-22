@@ -37,7 +37,7 @@ router.post("/register", upload.single(), async (req, res) => {
       name: fullname,
       email: username.toLowerCase(), // sanitize: convert email to lowercase
       password: encryptedPassword,
-      role:  req.body.role ? req.body.role : constants.ROLE_USER,
+      role: req.body.role ? req.body.role : constants.ROLE_USER,
     });
 
     // Create token
@@ -90,11 +90,11 @@ router.post("/authenticate", upload.single(), async (req, res) => {
       );
 
       user.token = token;
-      user.password = '';
-      user.updateAt = '123';
-      user.updatedBy = '123';
-      user.createdAt = '123';
-      user.createdBy = '123';
+      user.password = "";
+      user.updateAt = "123";
+      user.updatedBy = "123";
+      user.createdAt = "123";
+      user.createdBy = "123";
       const responseLoad = {
         token: token,
         user: user,

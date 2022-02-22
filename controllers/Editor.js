@@ -637,7 +637,7 @@ router.get("/getCourseTableData", auth, async (req, res) => {
 });
 
 //category table data
-router.get("/getCategoryTableData", auth, async (req, res) => {
+router.get("/getCategoryTableData",auth, async (req, res) => {
   const catmasterDropdown = await Coursemaster_Mod.find({});
   for (let catmasterElement of catmasterDropdown) {
     catmasterElement.label = catmasterElement.name;
